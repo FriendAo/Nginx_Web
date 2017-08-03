@@ -12,7 +12,6 @@
 		B376A78B1F33787F0067F61B /* font-awesome */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "font-awesome"; sourceTree = "<group>"; };
 		B376A78C1F33787F0067F61B /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
 		B376A78D1F33787F0067F61B /* index.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
-		B376A78E1F33787F0067F61B /* index111.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = index111.html; sourceTree = "<group>"; };
 		B376A78F1F33787F0067F61B /* js */ = {isa = PBXFileReference; lastKnownFileType = folder; path = js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -25,7 +24,6 @@
 				B376A78B1F33787F0067F61B /* font-awesome */,
 				B376A78C1F33787F0067F61B /* images */,
 				B376A78D1F33787F0067F61B /* index.html */,
-				B376A78E1F33787F0067F61B /* index111.html */,
 				B376A78F1F33787F0067F61B /* js */,
 			);
 			sourceTree = "<group>";
