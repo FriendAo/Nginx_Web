@@ -404,10 +404,33 @@
             <section id="data" class="box-content box-2 ">
 
                 <div class="table-responsive text-center" >
-                    <!--下面div显示查询结果-->
-                    <div id="AjaxTishi"></div>
                     <?php
-                        //输出
+                        function isMobile(){
+                            $useragent=isset($_SERVER['HTTP_USER_AGENT']) ? $_SERVER['HTTP_USER_AGENT'] : '';
+                            $useragent_commentsblock=preg_match('|\(.*?\)|',$useragent,$matches)>0?$matches[0]:'';
+                            function CheckSubstrs($substrs,$text){
+                                foreach($substrs as $substr)
+                                    if(false!==strpos($text,$substr)){
+                                        return true;
+                                    }
+                                    return false;
+                                    }
+                                $mobile_os_list=array('Google Wireless Transcoder','Windows CE','WindowsCE','Symbian','Android','armv6l','armv5','Mobile','CentOS','mowser','AvantGo','Opera Mobi','J2ME/MIDP','Smartphone','Go.Web','Palm','iPAQ');
+                                $mobile_token_list=array('Profile/MIDP','Configuration/CLDC-','160×160','176×220','240×240','240×320','320×240','UP.Browser','UP.Link','SymbianOS','PalmOS','PocketPC','SonyEricsson','Nokia','BlackBerry','Vodafone','BenQ','Novarra-Vision','Iris','NetFront','HTC_','Xda_','SAMSUNG-SGH','Wapaka','DoCoMo','iPhone','iPod');
+                                
+                                $found_mobile=CheckSubstrs($mobile_os_list,$useragent_commentsblock) || CheckSubstrs($mobile_token_list,$useragent);
+                                
+                                if ($found_mobile){
+                                    return true;
+                                }else{
+                                    return false;
+                                }
+                            }
+                        if (isMobile()){
+                            echo '手机端m.php.com';
+                            
+                        }else{
+                            echo '电脑端</br>';
                             echo '数据库共计:'.@$rows_all.'条</br>';
                             echo "<table  class='table table-bordered table-striped table-condensed' >";
                             echo "<th width='3%' style='vertical-align:middle;text-align:center;'>序号</th>";
@@ -426,15 +449,16 @@
                             echo "<th width='3.5%' style='vertical-align:middle;text-align:center;'>人员</th>";
                             echo "<th width='3.5%' style='vertical-align:middle;text-align:center;'>人员</th>";	
                             echo "<th width='3.5%' style='vertical-align:middle;text-align:center;'>人员</th>";
-                            while($rows=mysqli_fetch_array($result)){
-                                echo'<tr>';
-                                for($i=0;$i<$colums;$i++){
-                                    echo "<td style='vertical-align:middle;text-align:center;'>$rows[$i]</td>";
-                                }
-                                echo'</tr>';
+                        }
+                        while($rows=mysqli_fetch_array($result)){
+                            echo'<tr>';
+                            for($i=0;$i<$colums;$i++){
+                                echo "<td style='vertical-align:middle;text-align:center;'>$rows[$i]</td>";
                             }
-                            mysqli_free_result($result);
-                            mysqli_close($link);
+                            echo'</tr>';
+                        }
+                        mysqli_free_result($result);
+                        mysqli_close($link);
                     ?>
                 </div>
             </section>

@@ -3,7 +3,7 @@
     $host="localhost";
     $port="3306";
     $user="root";
-    $pass="Ar1989Ar";
+    $pass="";
     $dbname="LittlePaper";
     
     //初始化变量并写入数据

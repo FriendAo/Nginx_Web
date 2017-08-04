@@ -78,7 +78,7 @@
                             $host='localhost';
                             $port='3306';
                             $user='root';
-                            $pass='Ar1989Ar';
+                            $pass='';
                             $dbname='LittlePaper';
                             
                             //连接数据库,必须用 mysqli 写
