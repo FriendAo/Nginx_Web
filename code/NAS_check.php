@@ -427,7 +427,7 @@
                                 }
                             }
                         if (isMobile()){
-                            echo '手机端m.php.com';
+                            echo '手机端</br>';
                             
                         }else{
                             echo '电脑端</br>';
