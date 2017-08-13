@@ -29,9 +29,7 @@
         <!-- D-M-Y-->
         <script src="../js/date.js"> </script>
         <!-- user.css-->
-        <style>
-            .checktable{font-size:0.6px;}
-        </style>   
+   
     </head>
     <body>
         <nav class="navbar navbar-default navbar-fixed-top">

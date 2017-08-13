@@ -293,9 +293,9 @@
 									</div>
 									<div class="col-md-3">
 										<div class="form-group">
-										 <input type="text"  class="form-control" name="person" placeholder="姓名"/>
+										 <input type="text"   onKeyUp="value=value.replace(/[^\u4E00-\u9FA5]/g,'')" class="form-control" name="person" placeholder="姓名"/>
                                          <script>var i=1</script>
-                                         <input type="button"  class="btn btn-info" class="btn btn-3 btn-block" onclick="insertAdjacentHTML('beforebegin','<input type=text  class=form-control placeholder=姓名 name=person_'+i+++'>')" value="添加">
+                                         <input type="button"  class="btn btn-info" class="btn btn-3 btn-block" onclick="insertAdjacentHTML('beforebegin','<input type=text  class=form-control onKeyUp=value=value.replace(/[^\u4E00-\u9FA5]/g,\'\') placeholder=姓名 name=person_'+i+++'>')" value="添加">
 										</div>
 									</div>
 								</div>
