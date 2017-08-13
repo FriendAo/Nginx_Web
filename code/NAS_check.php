@@ -450,7 +450,7 @@
                         }
                         while($rows=mysqli_fetch_array($result)){
                             echo'<tr>';
-                            for($i=0;$i<$colums;$i++){
+                            for($i=0;$i<$colums-2;$i++){
                                 echo "<td style='vertical-align:middle;text-align:center;'>$rows[$i]</td>";
                             }
                             echo'</tr>';
