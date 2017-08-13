@@ -26,7 +26,7 @@
 	<!-- D-M-Y-->
 	<script src="../js/date.js"> </script>
 	<!--人员-->
-	<script src="../js/check.js"></script>
+	
 
 	<!--修改导航条背景-->
 	<style type="text/css">		
@@ -93,7 +93,7 @@
 				<div class="row">
 					<div class="col-md-8">
 						<div id="contact-form">
-							<form name="form1" method="post" action="./NAS_insert-e.php" >
+							<form name="form1" method="post" action="./NAS_insert.php" >
 							    <!--////////车型///////-->
 								<div class="row">
 								    <div class="col-md-12">
@@ -105,8 +105,9 @@
 										<div class="form-group">
 											<tr bgcolor=5272BA> 
                                             <td>
-											    <input type="radio"   name="motorcycle_type" id= "NCS" value="NCS">NCS
-                                                <input type="radio"   name="motorcycle_type" id= "NF" value="NF">NF
+											    <input type="radio"   name="motorcycle_type" id= "NCS" value="NCS" required="required">NCS
+                                                <input type="radio"   name="motorcycle_type" id= "NF" value="NF" required="required">NF
+												
                                             </td>    
                                             </tr>
 										</div>
@@ -123,13 +124,13 @@
 										<div class="form-group">
 											<tr bgcolor=5272BA>
                                                 <td>
-                                                   <input type="radio"   name="section" id= "UB1_1" value="前部">前部
-                                                   <input type="radio"   name="section" id= "UB1" value="下部一">下部一
-                                                   <input type="radio"   name="section" id= "UB2" value="下部二">下部二
-                                                   <input type="radio"   name="section" id= "AB" value="主焊">主焊
-                                                   <input type="radio"   name="section" id= "ST" value="侧围">侧围
-                                                   <input type="radio"   name="section" id= "ST" value="门盖">门盖
-                                                   <input type="radio"   name="section" id= "ST" value="装配">装配
+                                                   <input type="radio"   name="section" id= "UB1_1" value="前部" required="required">前部
+                                                   <input type="radio"   name="section" id= "UB1" value="下部一" required="required">下部一
+                                                   <input type="radio"   name="section" id= "UB2" value="下部二" required="required">下部二
+                                                   <input type="radio"   name="section" id= "AB" value="主焊" required="required">主焊
+                                                   <input type="radio"   name="section" id= "ST" value="侧围" required="required">侧围
+                                                   <input type="radio"   name="section" id= "ST" value="门盖" required="required">门盖
+                                                   <input type="radio"   name="section" id= "ST" value="装配" required="required">装配
                                                 </td> 													
                                             </tr>
 										</div>
@@ -144,7 +145,7 @@
 									</div>
 									<div class="col-md-6">
 										<div class="form-group" >
-										<input type="text" onKeyUp=value=value.replace(/[\W]/g,'') class="form-control" name="station" id="name" placeholder="例：4535 或 4535r 或 4535a"/>
+										<input type="text" onKeyUp=value=value.replace(/[\W]/g,'') class="form-control" name="station" id="name" placeholder="例：4535 或 4535r 或 4535a" required="required"/>
 										</div>
 									</div>
 								</div>
@@ -160,46 +161,46 @@
 									<div class="col-md-12">
 										<div class="form-group">
                                             <td>
-                                               <input type="radio"   name="sort"  value="机器人(含电柜)">机器人(含电柜）
-                                               <input type="radio"   name="sort"  value="机器人外围设备">机器人外围设备
+                                               <input type="radio"   name="sort"  value="机器人(含电柜)" required="required">机器人（含电柜）
+                                               <input type="radio"   name="sort"  value="机器人外围设备" required="required">机器人外围设备
                                             </td> 													
 										</div>
 										<div class="form-group">
                                             <td>
-                                               <input type="radio"   name="sort"  value="手动电阻焊">手动电阻焊
-                                               <input type="radio"   name="sort"  value="自动电阻焊">自动电阻焊
-                                               <input type="radio"   name="sort"  value="电弧焊">电弧焊
+                                               <input type="radio"   name="sort"  value="手动电阻焊" required="required">手动电阻焊
+                                               <input type="radio"   name="sort"  value="自动电阻焊" required="required">自动电阻焊
+                                               <input type="radio"   name="sort"  value="电弧焊" required="required">电弧焊
                                             </td>    
 										</div>
 										<div class="form-group">
                                             <td>
-                                               <input type="radio"   name="sort"  value="手动螺柱焊">手动螺柱焊
-                                               <input type="radio"   name="sort"  value="自动螺柱焊">自动螺柱焊
+                                               <input type="radio"   name="sort"  value="手动螺柱焊" required="required">手动螺柱焊
+                                               <input type="radio"   name="sort"  value="自动螺柱焊" required="required">自动螺柱焊
                                             </td> 
                                         </div>
 										<div class="form-group">
                                             <td>
-                                               <input type="radio"   name="sort"  value="手动涂胶机">手动涂胶机
-                                               <input type="radio"   name="sort"  value="自动涂胶机">自动涂胶机
+                                               <input type="radio"   name="sort"  value="手动涂胶机" required="required">手动涂胶机
+                                               <input type="radio"   name="sort"  value="自动涂胶机" required="required">自动涂胶机
                                             </td> 
                                         </div>
 										<div class="form-group">
                                             <td>
-                                               <input type="radio"   name="sort"  value="人机界面">人机界面
-                                               <input type="radio"   name="sort"  value="生产辅助">生产辅助
+                                               <input type="radio"   name="sort"  value="人机界面" required="required">人机界面
+                                               <input type="radio"   name="sort"  value="生产辅助" required="required">生产辅助
                                             </td>    
 										</div>
 										<div class="form-group">
                                             <td>
-                                               <input type="radio"   name="sort"  value="输送设备">输送设备
-                                               <input type="radio"   name="sort"  value="旋转设备">旋转设备
+                                               <input type="radio"   name="sort"  value="输送设备" required="required">输送设备
+                                               <input type="radio"   name="sort"  value="旋转设备" required="required">旋转设备
                                             </td>    
 										</div>
                                         <div class="form-group">
                                             <td>
-                                                <input type="radio"   name="sort"  value="冲铆">冲铆
-                                                <input type="radio"   name="sort"  value="压合">压合
-                                                <input type="radio"   name="sort"  value="框架">框架
+                                                <input type="radio"   name="sort"  value="冲铆" required="required">冲铆
+                                                <input type="radio"   name="sort"  value="压合" required="required">压合
+                                                <input type="radio"   name="sort"  value="框架" required="required">框架
                                             </td>
                                         </div>
 										
@@ -238,7 +239,7 @@
 									</div>
 									<div class="col-md-12">
 										<div class="form-group" >
-											<input type="text" onKeyUp="value=value.replace(/\D/g,'')" class="form-control" name="min" id="subject" placeholder="15"/>
+											<input type="text" onKeyUp="value=value.replace(/\D/g,'')" class="form-control" name="min" id="subject" placeholder="15" required="required"/>
 										</div>
 									</div>
 								</div>
@@ -251,7 +252,7 @@
 									</div>
 									<div class="col-md-12">
 										<div class="form-group">
-											<textarea name="fault_phenomenon" id="fault_phenomenon" class="form-control" rows="4" cols="25" placeholder="Message"></textarea>
+											<textarea name="fault_phenomenon" id="fault_phenomenon" class="form-control" rows="4" cols="25" placeholder="Message" required="required"></textarea>
 										</div>
 									</div>
 								</div>
@@ -265,7 +266,7 @@
 									</div>
 									<div class="col-md-12">
 										<div class="form-group">
-								           <textarea name="process" id="process" class="form-control" rows="4" cols="25" placeholder="Message"></textarea>
+								           <textarea name="process" id="process" class="form-control" rows="4" cols="25" placeholder="Message" required="required"></textarea>
 										</div>
 									</div>
 								</div>	
@@ -278,7 +279,7 @@
 									</div>
 									<div class="col-md-12">
 										<div class="form-group">
-								           <textarea name="cause" id="cause" class="form-control" rows="4" cols="25" placeholder="Message"></textarea>
+								           <textarea name="cause" id="cause" class="form-control" rows="4" cols="25" placeholder="Message" required="required"></textarea>
 										</div>
 									</div>
 								</div>
@@ -293,9 +294,9 @@
 									</div>
 									<div class="col-md-3">
 										<div class="form-group">
-										 <input type="text"    class="form-control" name="person" placeholder="姓名"/>
+										 <input type="text"  class="form-control" name="person" placeholder="姓名" required="required">
                                          <script>var i=1</script>
-                                         <input type="button"  class="btn btn-info" class="btn btn-3 btn-block" onclick="insertAdjacentHTML('beforebegin','<input type=text  class=form-control  placeholder=姓名 name=person_'+i+++'>')" value="添加">
+                                         <input type="button"  class="btn btn-info" class="btn btn-3 btn-block" onclick="insertAdjacentHTML('beforebegin','<input type=text  class=form-control placeholder=姓名 name=person_'+i+++'>')" value="添加">
 										</div>
 									</div>
 								</div>
@@ -303,7 +304,7 @@
 								<div class="row">
 									<div class="col-md-12">
 										<div class="form-group">						
-										<button type="submit" class="btn btn-3 btn-block" name="btnContactUs" id="btnContactUs">提交小票</button>
+										<button type="submit" class="btn btn-3 btn-block" name="btnSubmit" id="btnSubmit" value="电气">提交小票</button>
 										</div>
 									</div>
 								</div>
