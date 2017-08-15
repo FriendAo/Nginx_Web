@@ -426,7 +426,24 @@
                             }
                         if (isMobile()){
                             echo '手机端</br>';
-                            
+                            echo '数据库共计:'.@$rows_all.'条</br>';
+                            echo "<table  class='table table-bordered table-striped table-condensed' >";
+                            echo "<th width='3%' style='vertical-align:middle;text-align:center;'>序号</th>";
+                            echo "<th width='3%' style='vertical-align:middle;text-align:center;'>区域</th>";
+                            echo "<th width='3.5%' style='vertical-align:middle;text-align:center;'>工段</th>";
+                            echo "<th width='3%' style='vertical-align:middle;text-align:center;'>工位</th>";
+                            echo "<th width='8%' style='vertical-align:middle;text-align:center;'>设备</th>";
+                            echo "<th width='8%' style='vertical-align:middle;text-align:center;'>时间</th>";
+                            echo "<th width='3%' style='vertical-align:middle;text-align:center;'>停台分钟</th>";
+                            echo "<th width='15%' style='vertical-align:middle;text-align:center;'>现象</th>";
+                            echo "<th width='15%' style='vertical-align:middle;text-align:center;'>过程</th>";
+                            echo "<th width='15%' style='vertical-align:middle;text-align:center;'>原因</th>";
+                            echo "<th width='3.5%' style='vertical-align:middle;text-align:center;'>人员</th>";
+                            echo "<th width='3.5%' style='vertical-align:middle;text-align:center;'>人员</th>";
+                            echo "<th width='3.5%' style='vertical-align:middle;text-align:center;'>人员</th>";
+                            echo "<th width='3.5%' style='vertical-align:middle;text-align:center;'>人员</th>";
+                            echo "<th width='3.5%' style='vertical-align:middle;text-align:center;'>人员</th>";	
+                            echo "<th width='3.5%' style='vertical-align:middle;text-align:center;'>人员</th>";
                         }else{
                             echo '电脑端</br>';
                             echo '数据库共计:'.@$rows_all.'条</br>';

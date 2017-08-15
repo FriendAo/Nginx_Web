@@ -1,7 +1,7 @@
-function createSelect(ActionFlag) { 
-				var selYear = document.getElementById("tYEAR"); 
-				var selMonth = document.getElementById("tMON"); 
-				var selDay = document.getElementById("tDAY"); 
+function createSelect(ActionFlag,a,b,c) { 
+				var selYear = document.getElementById(a); 
+				var selMonth = document.getElementById(b); 
+				var selDay = document.getElementById(c); 
 				var dt = new Date(); 
 
 				if(ActionFlag == 1) { 
