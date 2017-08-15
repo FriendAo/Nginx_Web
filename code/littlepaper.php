@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<?php
+        require ("./NAS_checkResult.php");
+        ?>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -66,7 +69,7 @@
                 <ul class="nav navbar-nav navbar-right">
                   
 					<li>
-                        <a class="page-scroll" href="./littlepaper.html">重置页面</a>
+                        <a class="page-scroll" href="./littlepaper.php">重置页面</a>
                     </li>            
 					<li>
                         <a class="page-scroll" href="../index.html">返回主页</a>
@@ -108,7 +111,7 @@
 				<div class="row">
 		<div class="single-facts text-center col-sm-3 col-xs-12 mb-30">
 			<i class="icofont icofont-hat-alt"></i>
-			<h1 class="counter plus">200</h1>
+			<h1 class="counter plus"><?php echo @$rows_all;?></h1>
 			<p>本月小票数量</p>
 		</div>
 		<div class="single-facts text-center col-sm-3 col-xs-12 mb-30">
