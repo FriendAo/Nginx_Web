@@ -430,7 +430,7 @@
 										</div>
 										<div class="col-md-6">
 											<div class="form-group" >
-											<input type="text" onKeyUp="value=value.replace(/[\W]/g,'')" class="form-control" name="station" id="name" placeholder="例：Tb13或42区A100" required="required" />
+											<input type="text"  class="form-control" name="station" id="name" placeholder="例：Tb13或42区A100" required="required" />
 											</div>
 										</div>
 									</div>

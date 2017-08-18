@@ -301,89 +301,125 @@
 
                             //视图选择:车型
                             if (view == 'motorcycle_type'){
-                                var label_0 = document.getElementById("motorcycleType_ncs").value;
-                                var label_1 = document.getElementById("motorcycleType_nf").value;
-                                
-                                var data_0 = document.getElementById("motorcycleTypeData_ncs").value;
-                                var data_1 = document.getElementById("motorcycleTypeData_nf").value;
+								var label_arr = new Array();
+								if(document.getElementById("motorcycleType_ncs").value !== "")label_arr.push(document.getElementById("motorcycleType_ncs").value);
+								if(document.getElementById("motorcycleType_nf").value !== "")label_arr.push(document.getElementById("motorcycleType_nf").value); 
+								
+								var data_arr = new Array();
+                                data_arr.push(document.getElementById("motorcycleTypeData_ncs").value);
+                                data_arr.push(document.getElementById("motorcycleTypeData_nf").value);
 
                                 var data = {
-                                    labels: [label_0, label_1],
+									//等待标签插入
+                                    labels: [],
                                     datasets: [{
-                                        data: [data_0, data_1],
+										//等待值插入
+                                        data: [],
                                         backgroundColor: ["#FF6384","#36A2EB"]
                                     }]
                                 };
+								//标签插入	
+								for (var isLabel in label_arr){
+									data.labels.push(label_arr[isLabel]);
+								}
+								//值插入
+								for (var isData in data_arr){
+									data.datasets[0].data.push(data_arr[isData]);
+								}								
                             }
                             //视图选择:工段
                             if (view == 'section'){
-                                var label_0 = document.getElementById("section_ub1_1").value;
-                                var label_1 = document.getElementById("section_ub1").value;
-                                var label_2 = document.getElementById("section_ub2").value;
-                                var label_3 = document.getElementById("section_ab").value;
-                                var label_4 = document.getElementById("section_st").value;
-                                var label_5 = document.getElementById("section_sk").value;
-                                var label_6 = document.getElementById("section_ain").value;
-                                
-                                var data_0 = document.getElementById("sectionData_ub1_1").value;
-                                var data_1 = document.getElementById("sectionData_ub1").value;
-                                var data_2 = document.getElementById("sectionData_ub2").value;
-                                var data_3 = document.getElementById("sectionData_ab").value;
-                                var data_4 = document.getElementById("sectionData_st").value;
-                                var data_5 = document.getElementById("sectionData_sk").value;
-                                var data_6 = document.getElementById("sectionData_ain").value;
-                                
+								var label_arr = new Array();
+								if(document.getElementById("section_ub1_1").value !== "")label_arr.push(document.getElementById("section_ub1_1").value);
+								if(document.getElementById("section_ub1").value !== "")label_arr.push(document.getElementById("section_ub1").value);
+								if(document.getElementById("section_ub2").value !== "")label_arr.push(document.getElementById("section_ub2").value);
+								if(document.getElementById("section_ab").value !== "")label_arr.push(document.getElementById("section_ab").value);
+								if(document.getElementById("section_st").value !== "")label_arr.push(document.getElementById("section_st").value);
+								if(document.getElementById("section_sk").value !== "")label_arr.push(document.getElementById("section_sk").value);
+								if(document.getElementById("section_ain").value !== "")label_arr.push(document.getElementById("section_ain").value);
+								
+								var data_arr = new Array();
+								data_arr.push(document.getElementById("sectionData_ub1_1").value);
+								data_arr.push(document.getElementById("sectionData_ub1").value);
+								data_arr.push(document.getElementById("sectionData_ub2").value);
+								data_arr.push(document.getElementById("sectionData_ab").value);
+								data_arr.push(document.getElementById("sectionData_st").value);
+								data_arr.push(document.getElementById("sectionData_sk").value);
+								data_arr.push(document.getElementById("sectionData_ain").value);
+
                                 var data = {
-                                    labels: [label_0, label_1, label_2, label_3, label_4, label_5, label_6],
+									//等待标签插入
+                                    labels: [],
                                     datasets: [{
-                                        data: [data_0, data_1, data_2, data_3, data_4, data_5, data_6],
+										//等待值插入
+                                        data: [],
                                         backgroundColor: ["#FF6384", "#36A2EB", "#FF6633", "#33FF33", "#33FFFF", "#FF9966", "#9966FF"]
                                     }]
                                 };
+								//标签插入	
+								for (var isLabel in label_arr){
+									data.labels.push(label_arr[isLabel]);
+								}
+								//值插入
+								for (var isData in data_arr){
+									data.datasets[0].data.push(data_arr[isData]);
+								}
                             }
                             //视图选择:设备
                             if (view == 'sort'){
-                                var label_0 = document.getElementById("sort_0").value;
-                                var label_1 = document.getElementById("sort_1").value;
-                                var label_2 = document.getElementById("sort_2").value;
-                                var label_3 = document.getElementById("sort_3").value;
-                                var label_4 = document.getElementById("sort_4").value;
-                                var label_5 = document.getElementById("sort_5").value;
-                                var label_6 = document.getElementById("sort_6").value;
-                                var label_7 = document.getElementById("sort_7").value;
-                                var label_8 = document.getElementById("sort_8").value;
-                                var label_9 = document.getElementById("sort_9").value;
-                                var label_10 = document.getElementById("sort_10").value;
-                                var label_11 = document.getElementById("sort_11").value;
-                                var label_12 = document.getElementById("sort_12").value;
-                                var label_13 = document.getElementById("sort_13").value;
-                                var label_14 = document.getElementById("sort_14").value;
-                                var label_15 = document.getElementById("sort_15").value;
-                                
-                                var data_0 = document.getElementById("sortData_0").value;
-                                var data_1 = document.getElementById("sortData_1").value;
-                                var data_2 = document.getElementById("sortData_2").value;
-                                var data_3 = document.getElementById("sortData_3").value;
-                                var data_4 = document.getElementById("sortData_4").value;
-                                var data_5 = document.getElementById("sortData_5").value;
-                                var data_6 = document.getElementById("sortData_6").value;
-                                var data_7 = document.getElementById("sortData_7").value;
-                                var data_8 = document.getElementById("sortData_8").value;
-                                var data_9 = document.getElementById("sortData_9").value;
-                                var data_10 = document.getElementById("sortData_10").value;
-                                var data_11 = document.getElementById("sortData_11").value;
-                                var data_12 = document.getElementById("sortData_12").value;
-                                var data_13 = document.getElementById("sortData_13").value;
-                                var data_14 = document.getElementById("sortData_14").value;
-                                var data_15 = document.getElementById("sortData_15").value;
-                                
+								var label_arr = new Array();
+								if(document.getElementById("sort_0").value !== "")label_arr.push(document.getElementById("sort_0").value);
+								if(document.getElementById("sort_1").value !== "")label_arr.push(document.getElementById("sort_1").value);
+								if(document.getElementById("sort_2").value !== "")label_arr.push(document.getElementById("sort_2").value);
+								if(document.getElementById("sort_3").value !== "")label_arr.push(document.getElementById("sort_3").value);
+								if(document.getElementById("sort_4").value !== "")label_arr.push(document.getElementById("sort_4").value);
+								if(document.getElementById("sort_5").value !== "")label_arr.push(document.getElementById("sort_5").value);
+								if(document.getElementById("sort_6").value !== "")label_arr.push(document.getElementById("sort_6").value);
+								if(document.getElementById("sort_7").value !== "")label_arr.push(document.getElementById("sort_7").value);
+								if(document.getElementById("sort_8").value !== "")label_arr.push(document.getElementById("sort_8").value);
+								if(document.getElementById("sort_9").value !== "")label_arr.push(document.getElementById("sort_9").value);
+								if(document.getElementById("sort_10").value !== "")label_arr.push(document.getElementById("sort_10").value);
+								if(document.getElementById("sort_11").value !== "")label_arr.push(document.getElementById("sort_11").value);
+								if(document.getElementById("sort_12").value !== "")label_arr.push(document.getElementById("sort_12").value);
+								if(document.getElementById("sort_13").value !== "")label_arr.push(document.getElementById("sort_13").value);
+								if(document.getElementById("sort_14").value !== "")label_arr.push(document.getElementById("sort_14").value);
+								if(document.getElementById("sort_15").value !== "")label_arr.push(document.getElementById("sort_15").value);
+
+								var data_arr = new Array();
+								data_arr.push(document.getElementById("sortData_0").value);
+								data_arr.push(document.getElementById("sortData_1").value);
+								data_arr.push(document.getElementById("sortData_2").value);
+								data_arr.push(document.getElementById("sortData_3").value);
+								data_arr.push(document.getElementById("sortData_4").value);
+								data_arr.push(document.getElementById("sortData_5").value);
+								data_arr.push(document.getElementById("sortData_6").value);
+								data_arr.push(document.getElementById("sortData_7").value);
+								data_arr.push(document.getElementById("sortData_8").value);
+								data_arr.push(document.getElementById("sortData_9").value);
+								data_arr.push(document.getElementById("sortData_10").value);
+								data_arr.push(document.getElementById("sortData_11").value);
+								data_arr.push(document.getElementById("sortData_12").value);
+								data_arr.push(document.getElementById("sortData_13").value);
+								data_arr.push(document.getElementById("sortData_14").value);
+								data_arr.push(document.getElementById("sortData_15").value);
+								
                                 var data = {
-                                    labels: [label_0, label_1, label_2, label_3, label_4, label_5, label_6, label_7, label_8, label_9, label_10, label_11, label_12, label_13, label_14, label_15],
+									//等待标签插入
+                                    labels: [],
                                     datasets: [{
-                                        data: [data_0, data_1, data_2, data_3, data_4, data_5, data_6, data_7, data_8, data_9, data_10, data_11, data_12, data_13, data_14, data_15],
+										//等待值插入
+                                        data: [],
                                         backgroundColor: ["#FF6384", "#36A2EB", "#FF6633", "#33FF33", "#33FFFF", "#FF9966", "#9966FF", "#3399CC", "#996666", "#FFFF00", "#33CCCC", "#33CC99", "#99CC99", "#CCCCFF", "FF99CC", "#CC0033"]
                                     }]
                                 };
+								//标签插入	
+								for (var isLabel in label_arr){
+									data.labels.push(label_arr[isLabel]);
+								}
+								//值插入
+								for (var isData in data_arr){
+									data.datasets[0].data.push(data_arr[isData]);
+								}
                             }
 
                             var ctx = document.getElementById("myChart").getContext("2d");
