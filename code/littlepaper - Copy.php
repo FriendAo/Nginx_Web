@@ -28,11 +28,7 @@
 	<script src="../js/modernizr.js"></script>
 	<!-- D-M-Y-->
 	<script src="../js/date.js"> </script>
-	<script type="text/javascript">
-									var link = document.getElementById("home").value;
-									alert(link);
-								
-								</script>
+
 	<!--修改导航条背景-->
 	<style type="text/css">		
 		 .navbar-default {
@@ -40,7 +36,7 @@
 		 }
 	</style>
 			
-	<script type="text/javascript">
+	<script language="JavaScript">
 		$(function ()){
 			$('myTab a:last').tab('show')
 		})
@@ -84,7 +80,7 @@
                         <a href="#page-top"></a>
                     </li>
 					<li>
-                        <a class="page-scroll" href="#home" data-toggle="tab" name="home" value="e" >电气</a>
+                        <a class="page-scroll" href="#home" data-toggle="tab">电气</a>
                     </li>            
 					<li>
                         <a class="page-scroll" href="#1" data-toggle="tab">机械化</a>
@@ -100,41 +96,43 @@
     </nav>	
 	<!-- /////////////////////////////////////////Content -->	        
 	<section class="box-content box-5 ">
-		<div class="tab-content">		
+		<div class="tab-content">
+		
 			<div class="tab-pane fade in active">
-				<div class="container">
-					<div class="row heading">
+			<div class="container">
+			<div class="row heading">
 						<div class="col-lg-12">
 							<h2>电气工段小票录入系统</h2>
 							<hr>
 							<div class="intro">The Littlepaper system of Electric Section</div>
 						</div>
-					</div>				
-					<div class="row">
-						<div class="single-facts text-center col-sm-3 col-xs-12 mb-30">
-							<i class="icofont icofont-hat-alt"></i>
-							<h1 class="counter plus"><?php echo @$rows_all;?></h1>
-							<p>本月小票数量</p>
-						</div>
-						<div class="single-facts text-center col-sm-3 col-xs-12 mb-30">
-							<i class="icofont icofont-user-suited"></i>
-							<h1 class="counter">56</h1>
-							<p>本月巡检次数</p>
-						</div>
-						<div class="single-facts text-center col-sm-3 col-xs-12 mb-30">
-							<i class="icofont icofont-history"></i>
-							<h1 class="counter">11</h1>
-							<p>本月停台</p>
-						</div>
-						<div class="single-facts text-center col-sm-3 col-xs-12 mb-30">
-							<i class="icofont icofont-users-social"></i>
-							<h1 class="counter plus">1</h1>
-							<p>本月改进次数</p>
-						</div>
 					</div>
-				</div>
-			</div>
 				
+				<div class="row">
+		<div class="single-facts text-center col-sm-3 col-xs-12 mb-30">
+			<i class="icofont icofont-hat-alt"></i>
+			<h1 class="counter plus"><?php echo @$rows_all;?></h1>
+			<p>本月小票数量</p>
+		</div>
+		<div class="single-facts text-center col-sm-3 col-xs-12 mb-30">
+			<i class="icofont icofont-user-suited"></i>
+			<h1 class="counter">56</h1>
+			<p>本月巡检次数</p>
+		</div>
+		<div class="single-facts text-center col-sm-3 col-xs-12 mb-30">
+			<i class="icofont icofont-history"></i>
+			<h1 class="counter">11</h1>
+			<p>本月停台</p>
+		</div>
+		<div class="single-facts text-center col-sm-3 col-xs-12 mb-30">
+			<i class="icofont icofont-users-social"></i>
+			<h1 class="counter plus">1</h1>
+			<p>本月改进次数</p>
+		</div>
+	</div>
+		</div>
+			</div>
+			
 			<div class="tab-pane fade" id="home">
 				<div class="container">
 					<div class="row heading">
@@ -168,7 +166,6 @@
 										</div>
 									</div>
 									<!-- ////////工段////////-->
-									
 									<div class="row">
 										<div class="col-md-12">
 											<div class="form-group">
@@ -261,7 +258,7 @@
 											
 										</div>
 									</div>
-									<!--////////停台日期////////-->
+																	<!--////////停台日期////////-->
 									<div class="row">  
 										<div class="col-md-12">
 											<div class="form-group">

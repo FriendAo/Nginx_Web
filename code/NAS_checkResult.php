@@ -4,7 +4,7 @@
     $port="3306";
     $user="root";
     $pass="";
-    $dbname="LittlePaper";
+    $dbname="DATA";
     
     //初始化变量并写入数据
     //连接数据库,必须用 mysqli 写
@@ -65,7 +65,7 @@
     
     //车型显示数据
     if ($view == 'motorcycle_type'){
-        @$output_motorcycleType_ncs = "SELECT * FROM `LittlePaper`.`Data` WHERE 
+        @$output_motorcycleType_ncs = "SELECT * FROM `DATA`.`LittlePaper` WHERE 
         motorcycle_type LIKE '$motorcycle_type_c[0]'
         AND (section LIKE '$section_c[0]'
              OR section LIKE '$section_c[1]'
@@ -105,7 +105,7 @@
         $result_motorcycleType_ncs = mysqli_query($link,$output_motorcycleType_ncs);
         $rows_motorcycleType_ncs = mysqli_affected_rows($link);
         
-        @$output_motorcycleType_nf = "SELECT * FROM `LittlePaper`.`Data` WHERE 
+        @$output_motorcycleType_nf = "SELECT * FROM `DATA`.`LittlePaper` WHERE 
         motorcycle_type LIKE '$motorcycle_type_c[1]'
         AND (section LIKE '$section_c[0]'
              OR section LIKE '$section_c[1]'
@@ -148,7 +148,7 @@
 
     //工段显示数据
     if ($view == 'section'){
-        @$output_section_ub1_1 = "SELECT * FROM `LittlePaper`.`Data` WHERE
+        @$output_section_ub1_1 = "SELECT * FROM `DATA`.`LittlePaper` WHERE
         (motorcycle_type LIKE '$motorcycle_type_c[0]'
          OR motorcycle_type LIKE '$motorcycle_type_c[1]')
         AND section LIKE '$section_c[0]'
@@ -183,7 +183,7 @@
         $result_section_ub1_1 = mysqli_query($link,$output_section_ub1_1);
         $rows_section_ub1_1 = mysqli_affected_rows($link);
         
-        @$output_section_ub1 = "SELECT * FROM `LittlePaper`.`Data` WHERE
+        @$output_section_ub1 = "SELECT * FROM `DATA`.`LittlePaper` WHERE
         (motorcycle_type LIKE '$motorcycle_type_c[0]'
          OR motorcycle_type LIKE '$motorcycle_type_c[1]')
         AND section LIKE '$section_c[1]'
@@ -218,7 +218,7 @@
         $result_section_ub1 = mysqli_query($link,$output_section_ub1);
         $rows_section_ub1 = mysqli_affected_rows($link);
         
-        @$output_section_ub2 = "SELECT * FROM `LittlePaper`.`Data` WHERE
+        @$output_section_ub2 = "SELECT * FROM `DATA`.`LittlePaper` WHERE
         (motorcycle_type LIKE '$motorcycle_type_c[0]'
          OR motorcycle_type LIKE '$motorcycle_type_c[1]')
         AND  section LIKE '$section_c[2]'
@@ -253,7 +253,7 @@
         $result_section_ub2 = mysqli_query($link,$output_section_ub2);
         $rows_section_ub2 = mysqli_affected_rows($link);
         
-        @$output_section_ab = "SELECT * FROM `LittlePaper`.`Data` WHERE
+        @$output_section_ab = "SELECT * FROM `DATA`.`LittlePaper` WHERE
         (motorcycle_type LIKE '$motorcycle_type_c[0]'
          OR motorcycle_type LIKE '$motorcycle_type_c[1]')
         AND section LIKE '$section_c[3]'
@@ -288,7 +288,7 @@
         $result_section_ab = mysqli_query($link,$output_section_ab);
         $rows_section_ab = mysqli_affected_rows($link);
         
-        @$output_section_st = "SELECT * FROM `LittlePaper`.`Data` WHERE
+        @$output_section_st = "SELECT * FROM `DATA`.`LittlePaper` WHERE
         (motorcycle_type LIKE '$motorcycle_type_c[0]'
          OR motorcycle_type LIKE '$motorcycle_type_c[1]')
         AND section LIKE '$section_c[4]'
@@ -323,7 +323,7 @@
         $result_section_st = mysqli_query($link,$output_section_st);
         $rows_section_st = mysqli_affected_rows($link);
         
-        @$output_section_sk = "SELECT * FROM `LittlePaper`.`Data` WHERE
+        @$output_section_sk = "SELECT * FROM `DATA`.`LittlePaper` WHERE
         (motorcycle_type LIKE '$motorcycle_type_c[0]'
          OR motorcycle_type LIKE '$motorcycle_type_c[1]')
         AND section LIKE '$section_c[5]'
@@ -358,7 +358,7 @@
         $result_section_sk = mysqli_query($link,$output_section_sk);
         $rows_section_sk = mysqli_affected_rows($link);
         
-        @$output_section_ain = "SELECT * FROM `LittlePaper`.`Data` WHERE
+        @$output_section_ain = "SELECT * FROM `DATA`.`LittlePaper` WHERE
         (motorcycle_type LIKE '$motorcycle_type_c[0]'
          OR motorcycle_type LIKE '$motorcycle_type_c[1]')
         AND section LIKE '$section_c[6]'
@@ -396,7 +396,7 @@
     
     //设备显示数据
     if ($view == 'sort'){
-        @$output_sort_0 = "SELECT * FROM `LittlePaper`.`Data` 
+        @$output_sort_0 = "SELECT * FROM `DATA`.`LittlePaper` 
         (motorcycle_type LIKE '$motorcycle_type_c[0]'
          OR motorcycle_type LIKE '$motorcycle_type_c[1]')
         AND (section LIKE '$section_c[0]'
@@ -422,7 +422,7 @@
         $result_sort_0 = mysqli_query($link,$output_sort_0);
         $rows_sort_0 = mysqli_affected_rows($link);
         
-        @$output_sort_1 = "SELECT * FROM `LittlePaper`.`Data` WHERE 
+        @$output_sort_1 = "SELECT * FROM `DATA`.`LittlePaper` WHERE 
         (motorcycle_type LIKE '$motorcycle_type_c[0]'
          OR motorcycle_type LIKE '$motorcycle_type_c[1]')
         AND (section LIKE '$section_c[0]'
@@ -448,7 +448,7 @@
         $result_sort_1 = mysqli_query($link,$output_sort_1);
         $rows_sort_1 = mysqli_affected_rows($link);
         
-        @$output_sort_2 = "SELECT * FROM `LittlePaper`.`Data` WHERE 
+        @$output_sort_2 = "SELECT * FROM `DATA`.`LittlePaper` WHERE 
         (motorcycle_type LIKE '$motorcycle_type_c[0]'
          OR motorcycle_type LIKE '$motorcycle_type_c[1]')
         AND (section LIKE '$section_c[0]'
@@ -474,7 +474,7 @@
         $result_sort_2 = mysqli_query($link,$output_sort_2);
         $rows_sort_2 = mysqli_affected_rows($link);
         
-        @$output_sort_3 = "SELECT * FROM `LittlePaper`.`Data` WHERE 
+        @$output_sort_3 = "SELECT * FROM `DATA`.`LittlePaper` WHERE 
         (motorcycle_type LIKE '$motorcycle_type_c[0]'
          OR motorcycle_type LIKE '$motorcycle_type_c[1]')
         AND (section LIKE '$section_c[0]'
@@ -500,7 +500,7 @@
         $result_sort_3 = mysqli_query($link,$output_sort_3);
         $rows_sort_3 = mysqli_affected_rows($link);
         
-        @$output_sort_4 = "SELECT * FROM `LittlePaper`.`Data` WHERE 
+        @$output_sort_4 = "SELECT * FROM `DATA`.`LittlePaper` WHERE 
         (motorcycle_type LIKE '$motorcycle_type_c[0]'
          OR motorcycle_type LIKE '$motorcycle_type_c[1]')
         AND (section LIKE '$section_c[0]'
@@ -526,7 +526,7 @@
         $result_sort_4 = mysqli_query($link,$output_sort_4);
         $rows_sort_4 = mysqli_affected_rows($link);
         
-        @$output_sort_5 = "SELECT * FROM `LittlePaper`.`Data` WHERE 
+        @$output_sort_5 = "SELECT * FROM `DATA`.`LittlePaper` WHERE 
         (motorcycle_type LIKE '$motorcycle_type_c[0]'
          OR motorcycle_type LIKE '$motorcycle_type_c[1]')
         AND (section LIKE '$section_c[0]'
@@ -552,7 +552,7 @@
         $result_sort_5 = mysqli_query($link,$output_sort_5);
         $rows_sort_5 = mysqli_affected_rows($link);
         
-        @$output_sort_6 = "SELECT * FROM `LittlePaper`.`Data` WHERE 
+        @$output_sort_6 = "SELECT * FROM `DATA`.`LittlePaper` WHERE 
         (motorcycle_type LIKE '$motorcycle_type_c[0]'
          OR motorcycle_type LIKE '$motorcycle_type_c[1]')
         AND (section LIKE '$section_c[0]'
@@ -578,7 +578,7 @@
         $result_sort_6 = mysqli_query($link,$output_sort_6);
         $rows_sort_6 = mysqli_affected_rows($link);
         
-        @$output_sort_7 = "SELECT * FROM `LittlePaper`.`Data` WHERE 
+        @$output_sort_7 = "SELECT * FROM `DATA`.`LittlePaper` WHERE 
         (motorcycle_type LIKE '$motorcycle_type_c[0]'
          OR motorcycle_type LIKE '$motorcycle_type_c[1]')
         AND (section LIKE '$section_c[0]'
@@ -604,7 +604,7 @@
         $result_sort_7 = mysqli_query($link,$output_sort_7);
         $rows_sort_7 = mysqli_affected_rows($link);
         
-        @$output_sort_8 = "SELECT * FROM `LittlePaper`.`Data` WHERE 
+        @$output_sort_8 = "SELECT * FROM `DATA`.`LittlePaper` WHERE 
         (motorcycle_type LIKE '$motorcycle_type_c[0]'
          OR motorcycle_type LIKE '$motorcycle_type_c[1]')
         AND (section LIKE '$section_c[0]'
@@ -630,7 +630,7 @@
         $result_sort_8 = mysqli_query($link,$output_sort_8);
         $rows_sort_8 = mysqli_affected_rows($link);
         
-        @$output_sort_9 = "SELECT * FROM `LittlePaper`.`Data` WHERE 
+        @$output_sort_9 = "SELECT * FROM `DATA`.`LittlePaper` WHERE 
         (motorcycle_type LIKE '$motorcycle_type_c[0]'
          OR motorcycle_type LIKE '$motorcycle_type_c[1]')
         AND (section LIKE '$section_c[0]'
@@ -656,7 +656,7 @@
         $result_sort_9 = mysqli_query($link,$output_sort_9);
         $rows_sort_9 = mysqli_affected_rows($link);
         
-        @$output_sort_10 = "SELECT * FROM `LittlePaper`.`Data` WHERE 
+        @$output_sort_10 = "SELECT * FROM `DATA`.`LittlePaper` WHERE 
         (motorcycle_type LIKE '$motorcycle_type_c[0]'
         OR motorcycle_type LIKE '$motorcycle_type_c[1]')
         AND (section LIKE '$section_c[0]'
@@ -682,7 +682,7 @@
         $result_sort_10 = mysqli_query($link,$output_sort_10);
         $rows_sort_10 = mysqli_affected_rows($link);
         
-        @$output_sort_11 = "SELECT * FROM `LittlePaper`.`Data` WHERE 
+        @$output_sort_11 = "SELECT * FROM `DATA`.`LittlePaper` WHERE 
         (motorcycle_type LIKE '$motorcycle_type_c[0]'
          OR motorcycle_type LIKE '$motorcycle_type_c[1]')
         AND (section LIKE '$section_c[0]'
@@ -708,7 +708,7 @@
         $result_sort_11 = mysqli_query($link,$output_sort_11);
         $rows_sort_11 = mysqli_affected_rows($link);
         
-        @$output_sort_12 = "SELECT * FROM `LittlePaper`.`Data` WHERE 
+        @$output_sort_12 = "SELECT * FROM `DATA`.`LittlePaper` WHERE 
         (motorcycle_type LIKE '$motorcycle_type_c[0]'
          OR motorcycle_type LIKE '$motorcycle_type_c[1]')
         AND (section LIKE '$section_c[0]'
@@ -734,7 +734,7 @@
         $result_sort_12 = mysqli_query($link,$output_sort_12);
         $rows_sort_12 = mysqli_affected_rows($link);
         
-        @$output_sort_13 = "SELECT * FROM `LittlePaper`.`Data` WHERE 
+        @$output_sort_13 = "SELECT * FROM `DATA`.`LittlePaper` WHERE 
         (motorcycle_type LIKE '$motorcycle_type_c[0]'
          OR motorcycle_type LIKE '$motorcycle_type_c[1]')
         AND (section LIKE '$section_c[0]'
@@ -760,7 +760,7 @@
         $result_sort_13 = mysqli_query($link,$output_sort_13);
         $rows_sort_13 = mysqli_affected_rows($link);
         
-        @$output_sort_14 = "SELECT * FROM `LittlePaper`.`Data` WHERE 
+        @$output_sort_14 = "SELECT * FROM `DATA`.`LittlePaper` WHERE 
         (motorcycle_type LIKE '$motorcycle_type_c[0]'
          OR motorcycle_type LIKE '$motorcycle_type_c[1]')
         AND (section LIKE '$section_c[0]'
@@ -786,7 +786,7 @@
         $result_sort_14 = mysqli_query($link,$output_sort_14);
         $rows_sort_14 = mysqli_affected_rows($link);
         
-        @$output_sort_15 = "SELECT * FROM `LittlePaper`.`Data` WHERE 
+        @$output_sort_15 = "SELECT * FROM `DATA`.`LittlePaper` WHERE 
         (motorcycle_type LIKE '$motorcycle_type_c[0]'
          OR motorcycle_type LIKE '$motorcycle_type_c[1]')
         AND (section LIKE '$section_c[0]'
@@ -817,7 +817,7 @@
     @$output_all = "SELECT
     *
     FROM
-    `LittlePaper`.`Data`
+    `DATA`.`LittlePaper`
     WHERE
     (motorcycle_type LIKE '$motorcycle_type_c[0]'
      OR motorcycle_type LIKE '$motorcycle_type_c[1]')

@@ -37,7 +37,7 @@
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header page-scroll">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <button type="button" class="navbar-toggle" DATA-toggle="collapse" DATA-target="#bs-example-navbar-collapse-1">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -79,7 +79,7 @@
                             $port='3306';
                             $user='root';
                             $pass='';
-                            $dbname='LittlePaper';
+                            $dbname='DATA';
                             
                             //连接数据库,必须用 mysqli 写
                             $link = new mysqli($host,$user,$pass,$dbname,$port);
@@ -115,30 +115,30 @@
                             //格式化类型,整数1转01
                             $downtime_m = sprintf("%02d",$_POST['downtime_m']);
                             
-                            $input="insert into `LittlePaper`.`Data` (motorcycle_type,section,station,sort,downtime,min,fault_phenomenon,process,cause,person,person_1,person_2,person_3,person_4,person_5,class,inTime) values ('$motorcycle_type','$section','$station','$sort','$downtime','$_POST[min]','$_POST[fault_phenomenon]','$_POST[process]','$_POST[cause]','$name','$name_1','$name_2','$name_3','$name_4','$name_5','$class',now())";
+                            $input="insert into `DATA`.`LittlePaper` (motorcycle_type,section,station,sort,downtime,min,fault_phenomenon,process,cause,person,person_1,person_2,person_3,person_4,person_5,class,inTime) values ('$motorcycle_type','$section','$station','$sort','$downtime','$_POST[min]','$_POST[fault_phenomenon]','$_POST[process]','$_POST[cause]','$name','$name_1','$name_2','$name_3','$name_4','$name_5','$class',now())";
                             
                             //查询数据
-                            $output = "SELECT COUNT(*) AS count FROM `LittlePaper`.`Data` WHERE date_format(downtime,'%m') like '$downtime_m' and (person like '$name' OR person_1 like '$name' OR person_2 like '$name' OR person_3 like '$name' OR person_4 like '$name' OR person_5 like '$name')";
+                            $output = "SELECT COUNT(*) AS count FROM `DATA`.`LittlePaper` WHERE date_format(downtime,'%m') like '$downtime_m' and (person like '$name' OR person_1 like '$name' OR person_2 like '$name' OR person_3 like '$name' OR person_4 like '$name' OR person_5 like '$name')";
                             $result = mysqli_query($link,$output);
                             $rows = mysqli_fetch_array($result);
                             
-                            $output1 = "SELECT COUNT(*) AS count FROM `LittlePaper`.`Data` WHERE date_format(downtime,'%m') like '$downtime_m' and (person like '$name_1' OR person_1 like '$name_1' OR person_2 like '$name_1' OR person_3 like '$name_1' OR person_4 like '$name_1' OR person_5 like '$name_1')";
+                            $output1 = "SELECT COUNT(*) AS count FROM `DATA`.`LittlePaper` WHERE date_format(downtime,'%m') like '$downtime_m' and (person like '$name_1' OR person_1 like '$name_1' OR person_2 like '$name_1' OR person_3 like '$name_1' OR person_4 like '$name_1' OR person_5 like '$name_1')";
                             $result1 = mysqli_query($link,$output1);
                             $rows1 = mysqli_fetch_array($result1);
                             
-                            $output2 = "SELECT COUNT(*) AS count FROM `LittlePaper`.`Data` WHERE date_format(downtime,'%m') like '$downtime_m' and (person like '$name_2' OR person_1 like '$name_2' OR person_2 like '$name_2' OR person_3 like '$name_2' OR person_4 like '$name_2' OR person_5 like '$name_2')";
+                            $output2 = "SELECT COUNT(*) AS count FROM `DATA`.`LittlePaper` WHERE date_format(downtime,'%m') like '$downtime_m' and (person like '$name_2' OR person_1 like '$name_2' OR person_2 like '$name_2' OR person_3 like '$name_2' OR person_4 like '$name_2' OR person_5 like '$name_2')";
                             $result2 = mysqli_query($link,$output2);
                             $rows2 = mysqli_fetch_array($result2);
                             
-                            $output3 = "SELECT COUNT(*) AS count FROM `LittlePaper`.`Data` WHERE date_format(downtime,'%m') like '$downtime_m' and (person like '$name_3' OR person_1 like '$name_3' OR person_2 like '$name_3' OR person_3 like '$name_3' OR person_4 like '$name_3' OR person_5 like '$name_3')";
+                            $output3 = "SELECT COUNT(*) AS count FROM `DATA`.`LittlePaper` WHERE date_format(downtime,'%m') like '$downtime_m' and (person like '$name_3' OR person_1 like '$name_3' OR person_2 like '$name_3' OR person_3 like '$name_3' OR person_4 like '$name_3' OR person_5 like '$name_3')";
                             $result3 = mysqli_query($link,$output3);
                             $rows3 = mysqli_fetch_array($result3);
                             
-                            $output4 = "SELECT COUNT(*) AS count FROM `LittlePaper`.`Data` WHERE date_format(downtime,'%m') like '$downtime_m' and (person like '$name_4' OR person_1 like '$name_4' OR person_2 like '$name_4' OR person_3 like '$name_4' OR person_4 like '$name_4' OR person_5 like '$name_4')";
+                            $output4 = "SELECT COUNT(*) AS count FROM `DATA`.`LittlePaper` WHERE date_format(downtime,'%m') like '$downtime_m' and (person like '$name_4' OR person_1 like '$name_4' OR person_2 like '$name_4' OR person_3 like '$name_4' OR person_4 like '$name_4' OR person_5 like '$name_4')";
                             $result4 = mysqli_query($link,$output4);
                             $rows4 = mysqli_fetch_array($result4);
                             
-                            $output5 = "SELECT COUNT(*) AS count FROM `LittlePaper`.`Data` WHERE date_format(downtime,'%m') like '$downtime_m' and (person like '$name_5' OR person_1 like '$name_5' OR person_2 like '$name_5' OR person_3 like '$name_5' OR person_4 like '$name_5' OR person_5 like '$name_5')";
+                            $output5 = "SELECT COUNT(*) AS count FROM `DATA`.`LittlePaper` WHERE date_format(downtime,'%m') like '$downtime_m' and (person like '$name_5' OR person_1 like '$name_5' OR person_2 like '$name_5' OR person_3 like '$name_5' OR person_4 like '$name_5' OR person_5 like '$name_5')";
                             $result5 = mysqli_query($link,$output5);
                             $rows5 = mysqli_fetch_array($result5);
                             
